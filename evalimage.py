@@ -17,12 +17,7 @@ def is_target_color_present(file):
         for rank, (occurrence, color) in enumerate(sorted_colors, start=1):
             print(f"Rank {rank}: Color: {color}, Occurrence: {occurrence}")
 
-        for c in colors:
-            if c[0] > max_occurrence:
-                max_occurrence, most_present = c
-
-        # Check if the target color is present
-        if most_present == target_color:
+        if target_color in [color for occurrence, color in colors]:
             print(f"The target color {target_color} is present in the image.")
             return True
         else:
