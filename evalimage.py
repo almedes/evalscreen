@@ -15,6 +15,8 @@ def is_target_color_present(file):
         for c in colors:
             if c[0] > max_occurrence:
                 max_occurrence, most_present = c
+            occurrence, color = c
+            print(f"Color: {color}, Occurrence: {occurrence}")
 
         # Check if the target color is present
         if most_present == target_color:
