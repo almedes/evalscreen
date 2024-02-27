@@ -4,7 +4,7 @@ export DISPLAY=:0.0
 export XAUTHORITY=/home/pi/.Xauthority
 
 timestamp=$(date +"%Y%m%d%H%M%S")
-filename="/path/to/screenshots/screen_$timestamp.png"
+filename="/home/pi/evalscreen/screen_$timestamp.png"
 
 scrot -q 20 "$filename"
 
