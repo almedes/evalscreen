@@ -16,7 +16,7 @@ def get_main_color(file):
         return most_present
     except TypeError:
     # Too many colors in the image
-    return (0, 0, 0)
+        return (0, 0, 0)
 
 
 if get_main_color('screen.png') == (0, 0, 0):
