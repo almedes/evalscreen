@@ -16,6 +16,6 @@ def get_main_color(file):
         #Too many colors in the image
     return (0, 0, 0)
 
-if get_main_color('screen.png') != (0, 0, 0):
+if get_main_color('screen.png') == (0, 0, 0):
     print('Aw,snap')
     sys.exit(1)
