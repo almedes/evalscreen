@@ -9,19 +9,18 @@ def is_target_color_present(file):
     target_color = (221, 68, 68)  # Set the target color as a hardcoded value
     img = Image.open(file)
     colors = img.getcolors(256 * 1024)  # put a higher value if there are many colors in your image
-    max_occurrence, most_present = 0, 0
 
     try:
-        sorted_colors = sorted(colors, key=lambda x: x[0], reverse=True)[:10]
+        # sorted_colors = sorted(colors, key=lambda x: x[0], reverse=True)[:10]
 
-        for rank, (occurrence, color) in enumerate(sorted_colors, start=1):
-            print(f"Rank {rank}: Color: {color}, Occurrence: {occurrence}")
+        # for rank, (occurrence, color) in enumerate(sorted_colors, start=1):
+        #    print(f"Rank {rank}: Color: {color}, Occurrence: {occurrence}")
 
         if target_color in [color for occurrence, color in colors]:
-            print(f"The target color {target_color} is present in the image.")
+            # print(f"The target color {target_color} is present in the image.")
             return True
         else:
-            print(f"The target color {target_color} is not present in the image.")
+            # print(f"The target color {target_color} is not present in the image.")
             return False
 
     except TypeError:
@@ -32,7 +31,7 @@ def is_target_color_present(file):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python evalimage.py <image_filename>")
+        # print("Usage: python evalimage.py <image_filename>")
         sys.exit(1)
 
     image_filename = sys.argv[1]
