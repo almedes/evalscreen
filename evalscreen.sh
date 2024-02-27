@@ -3,9 +3,12 @@
 export DISPLAY=:0.0
 export XAUTHORITY=/home/pi/.Xauthority
 
-scrot -q 20 /home/pi/evalscreen/screen.png
+timestamp=$(date +"%Y%m%d%H%M%S")
+filename="/path/to/screenshots/screen_$timestamp.png"
 
-$(dirname "$0")/evalimage.py
+scrot -q 20 "$filename"
+
+$(dirname "$0")/evalimage.py "$filename"
 
 if [ $? -eq 0 ]
 then

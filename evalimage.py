@@ -35,6 +35,13 @@ def is_target_color_present(file):
         return False
 
 
-if is_target_color_present('/home/pi/evalscreen/screen.png'):
-    print('Found color in image - seems to be alive ... Wont restart')
-    sys.exit(1)
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python evalimage.py <image_filename>")
+        sys.exit(1)
+
+    image_filename = sys.argv[1]
+
+    if is_target_color_present(image_filename):
+        print('Found color in the image - seems to be alive... Won\'t restart.')
+        sys.exit(1)
