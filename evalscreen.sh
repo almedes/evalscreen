@@ -13,6 +13,8 @@ $(dirname "$0")/evalimage.py "$filename"
 if [ $? -eq 0 ]
 then
     echo $(date -u) "OK"
+    # Remove the image when condition is OK
+    rm "$filename"
 else
     echo $(date -u) "Aborted->Refresh"
     xdotool key --window $(xdotool getactivewindow) ctrl+R
