@@ -3,7 +3,7 @@
 export DISPLAY=:0.0
 export XAUTHORITY=/home/pi/.Xauthority
 
-scrot -q 20 screen.png
+scrot -q 20 /home/pi/evalscreen/screen.png
 
 $(dirname "$0")/evalimage.py
 
