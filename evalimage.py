@@ -12,11 +12,14 @@ def is_target_color_present(file):
     max_occurrence, most_present = 0, 0
 
     try:
+        sorted_colors = sorted(colors, key=lambda x: x[0], reverse=True)[:10]
+
+        for rank, (occurrence, color) in enumerate(sorted_colors, start=1):
+            print(f"Rank {rank}: Color: {color}, Occurrence: {occurrence}")
+
         for c in colors:
             if c[0] > max_occurrence:
                 max_occurrence, most_present = c
-            occurrence, color = c
-            print(f"Color: {color}, Occurrence: {occurrence}")
 
         # Check if the target color is present
         if most_present == target_color:
