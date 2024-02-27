@@ -13,6 +13,7 @@ def get_main_color(file):
         for c in colors:
             if c[0] > max_occurence:
                 (max_occurence, most_present) = c
+        print(most_present)
         return most_present
     except TypeError:
         # Too many colors in the image
