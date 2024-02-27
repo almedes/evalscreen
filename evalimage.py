@@ -37,7 +37,4 @@ if __name__ == "__main__":
     image_filename = sys.argv[1]
 
     if not is_target_color_present(image_filename):
-        print('Target color not found in the image - restarting.')
         sys.exit(1)
-    else:
-        print('Found target color in the image - seems to be alive... Won\'t restart.')
