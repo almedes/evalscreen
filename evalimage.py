@@ -6,7 +6,7 @@ from PIL import Image
 
 
 def is_target_color_present(file):
-    target_color = (255, 119, 0)  # Set the target color as a hardcoded value
+    target_color = (221, 68, 68)  # Set the target color as a hardcoded value
     img = Image.open(file)
     colors = img.getcolors(256 * 1024)  # put a higher value if there are many colors in your image
     max_occurrence, most_present = 0, 0
